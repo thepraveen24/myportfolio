@@ -1,0 +1,762 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praveen Reddy Mittapally – Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --accent: #3b82f6;
+            --bg: #f9fafb;
+            --fg: #111827;
+            --muted: #6b7280;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter',sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+        }
+
+        header {
+            width: 100%;
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        nav a {
+            margin-left: 1.5rem;
+            font-weight: 600;
+            color: var(--fg);
+            text-decoration: none;
+            position: relative;
+        }
+
+            nav a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -4px;
+                width: 0;
+                height: 2px;
+                background: var(--accent);
+                transition: .3s;
+            }
+
+            nav a:hover::after {
+                width: 100%;
+            }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            padding-top: 4rem;
+            padding-bottom: 6rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+            .hero img {
+                width: 100%;
+                border-radius: 1.5rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,.1);
+            }
+
+        h1 {
+            font-size: clamp(2rem,5vw,3.5rem);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.125rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: .75rem 1.5rem;
+            border-radius: .75rem;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+            .btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 24px rgba(59,130,246,.3);
+            }
+
+        section {
+            padding: 4rem 0;
+            border-top: 1px solid #e5e7eb;
+        }
+
+            section h2 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .card.horizontal {
+                flex-direction: row;
+            }
+
+            .card img {
+                width: 100%;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+            }
+
+            .card.horizontal img {
+                width: 40%;
+                aspect-ratio: auto;
+                border-right: 1px solid #e5e7eb;
+            }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .card-content h3 {
+                font-size: 1.25rem;
+                margin-bottom: .5rem;
+            }
+
+            .card-content p {
+                flex: 1;
+                color: var(--muted);
+                margin-bottom: 1rem;
+            }
+
+        footer {
+            padding: 2rem 1rem;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        @media(prefers-color-scheme:dark) {
+            :root {
+                --bg: #111827;
+                --fg: #f3f4f6;
+                --muted: #9ca3af;
+            }
+
+            header, section {
+                border-color: #1f2937;
+            }
+
+            .card {
+                background: #1f2937;
+            }
+
+                .card.horizontal img {
+                    border-right-color: #374151;
+                }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" style="font-weight:700;font-size:1.25rem;"><span style="color:var(--accent)">Praveen Reddy Mittapally</span></div>
+        <nav>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#qualifications">Qualifications</a>
+            <a href="#Certifications">Certifications</a>
+            <a href="#hobbies">Interests</a>
+            <a href="#Commitments">Beyond Work</a>
+            <a href="#about">About</a>
+         
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h1>Hi, I'm Praveen Reddy Mittapally</h1>
+                <p class="tagline">Business Analyst translating data insights into strategic recommendations for smarter decisions.</p>
+                <a class="btn" href="#contact">Get In Touch</a>
+            </div>
+            <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\IMG_0548_optimized_1000.jpeg" alt="Praveen Reddy Mittapally" />
+        </section>
+
+        <!-- EXPERIENCE CARDS -->
+        <section id="experience">
+            <h2 style="font-size:2rem;margin-bottom:1.5rem;text-align:center;color:#1a202c;">Experience</h2>
+            <div class="grid">
+                <div class="card horizontal">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\Accenture-What-we-think-gradient-hero_social-thumbnail-landscape.webp" alt="Accenture" />
+                    <div style="font-family:Arial,Helvetica,sans-serif;color:#333;padding:1rem;">
+                        <p><strong>Feb 2022 – Jul 2023 (Full Time)</strong></p>
+                        <ul style="padding-left:1.25rem;line-height:1.6;">
+                            <li>Collaborated with stakeholders to gather and define business requirements.</li>
+                            <li>Analyzed data and processes to identify improvement opportunities.</li>
+                            <li>Created detailed documentation including BRDs, use cases, and workflows.</li>
+                            <li>Conducted gap analysis and proposed effective business solutions.</li>
+                            <li>Translated business needs into clear technical requirements for developers.</li>
+                            <li>Supported project planning and agile delivery through sprint ceremonies.</li>
+                            <li>Facilitated UAT by preparing test cases and coordinating end-user feedback.</li>
+                            <li>Generated reports and dashboards for data-driven decision-making.</li>
+                            <li>Acted as a bridge between technical teams and business users.</li>
+                            <li>Ensured solution alignment with strategic goals and user expectations.</li>
+                        </ul>
+                    </div>
+
+                </div>
+        </section>
+        <!-- ===== Skills Section ===== -->
+        <section id="skills" style="padding:3rem 1rem;">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:2rem;">Core Skills</h2>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Business Analysis&nbsp;&amp; Documentation</h3>
+                    <p>Requirements Gathering, BRD/FRD, Use Cases, UML, SDLC, GAP Analysis</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Agile&nbsp;&amp; Collaboration</h3>
+                    <p>Scrum, Agile &amp; Waterfall, JIRA, Confluence, Stakeholder Communication</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Data&nbsp;&amp; Tools</h3>
+                    <p>SQL, Power BI, Tableau, Excel, PowerPoint, Snowflake (Basic), REST API Concepts</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Testing&nbsp;&amp; QA</h3>
+                    <p>UAT, Test Plans, Functional Testing, Regression Testing, Postman</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Coordination&nbsp;&amp; COTS</h3>
+                    <p>Meeting Facilitation, COTS Platforms (Power BI, EMR Tools, Retail Order Systems)</p>
+                </article>
+                <article class="skill-card">
+                    <h3> Languages & Technical Skills</h3>
+                    <p>MPython, C#, JavaScript, HTML5, CSS3, Bootstrap, SQL, LINQ, NUnit, Visual Studio 2017/2022</p>
+                </article>
+            </div>
+        </section>
+
+        <style>
+            /* Two‑column responsive skills grid */
+            .skills-grid {
+                display: grid;
+                gap: 1.25rem;
+                grid-template-columns: 1fr;
+            }
+
+            @media (min-width:600px) {
+                .skills-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            .skill-card {
+                background: #fff;
+                border-radius: 12px;
+                padding: 1.25rem 1.5rem;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+                transition: transform .25s ease, box-shadow .25s ease;
+            }
+
+                .skill-card:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+                }
+
+                .skill-card h3 {
+                    margin: 0 0 .5rem;
+                    font-size: 1.15rem;
+                    letter-spacing: .3px;
+                }
+
+                .skill-card p {
+                    margin: 0;
+                    font-size: .95rem;
+                    line-height: 1.5;
+                    color: #555;
+                }
+        </style>
+       
+        <!-- ===== Qualifications Section ===== -->
+        <section id="qualifications" style="padding: 3rem 1rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center; color: #1a202c;">Qualifications</h2>
+
+            <div class="qualifications-grid">
+                <!-- Master's Degree -->
+                <div class="qual-item">
+                    <div class="card-text">
+                        <h3>M.S. Information Technology Management</h3>
+                        <p>Concordia University, St. Paul — 2024</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\grad walk.jpeg" alt="MS Certificate" />
+                    </div>
+                </div>
+
+                <!-- Master's Certificate -->
+                <div class="qual-item">
+                    <div class="card-text">
+                        <h3>Degree Certificate</h3>
+                        <p>Issued by Concordia University</p>
+                    </div>
+                    <div class="card-img">
+                        <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\Screenshot 2025-05-18 170245.png" alt="MS Degree Certificate" />
+                    </div>
+                </div>
+               
+                <div class="qual-item">
+                    <div class="card-text">
+                        <h3>B.Tech Computer Science</h3>
+                        <p>St. Peter's Engineering College, Hyderabad — 2021</p>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\WhatsApp Image 2025-05-19 at 14.15.47_ea5f4e87.jpg" alt="BTech Degree Certificate" style="width: 100%; max-width: 500px; height: auto; border-radius: 8px;" />
+                    </div>
+                </div>
+
+                <!-- Bachelor's Certificate -->
+                <div class="qual-item">
+                    <div class="card-text">
+                        <h3>Degree Certificate</h3>
+                        <p>Issued by St. Peter's Engineering College</p>
+                    </div>
+                    <div class="card-img">
+                        <div style="display: flex; justify-content: center;">
+                            <img src=  "C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\btech_certificate_resized.jpg" alt="BTech Degree Certificate" style="width: 350px; height: auto; border-radius: 8px;" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .qualifications-grid {
+                display: grid;
+                gap: 2rem;
+                grid-template-columns: 1fr;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+            @media (min-width: 700px) {
+                .qualifications-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            .qual-item {
+                display: flex;
+                flex-direction: column;
+                background: #fff;
+                border-radius: 12px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+                overflow: hidden;
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+
+                .qual-item:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+                }
+
+            .card-text {
+                padding: 1rem 1.25rem;
+            }
+
+                .card-text h3 {
+                    font-size: 1.15rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                .card-text p {
+                    font-size: 0.95rem;
+                    color: #555;
+                    margin: 0;
+                }
+
+            .card-img {
+                width: 100%;
+                height: auto;
+            }
+
+                .card-img img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+        </style>
+
+
+       
+        <!-- Certifications -->
+        <!-- ===== Certifications Section ===== -->
+
+        <section id="Certifications" style="padding: 3rem 1rem;">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Certifications</h2>
+
+            <div class="certifications-grid">
+                <!-- Microsoft Excel Certificate -->
+                <a href="https://www.coursera.org/account/accomplishments/verify/5T0HCOY79BHQ" target="_blank" class="cert-card">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\Screenshot 2025-05-18 170102.png" alt="Microsoft Excel Analytics Certificate" />
+                    <div class="cert-content">
+                        <h3>Data for Business Analytics with Microsoft Excel</h3>
+                        <p>Microsoft — 2025</p>
+                    </div>
+                </a>
+
+                <!-- University of Michigan Python Certificate -->
+                <a href="https://www.coursera.org/account/accomplishments/verify/BE7DBEXCLV46?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" class="cert-card">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\CERTIFICATE_LANDING_PAGE~BE7DBEXCLV46.jpeg" alt="University of Michigan Python Certificate" />
+                    <div class="cert-content">
+                        <h3>Programming for Everybody (Python)</h3>
+                        <p>University of Michigan — 2021</p>
+                    </div>
+                </a>
+                <!-- Pega -->
+                <a href="https://accounts.pega.com/profile/PraveenReddyM16576612/share/BPEGAPCSA86V1-PEGAPCSA86V1" target="_blank" class="cert-card">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\Screenshot 2025-05-19 122758.png" alt="Microsoft Excel Analytics Certificate" />
+                    <div class="cert-content">
+                        <h3>Certified Pega System Architect</h3>
+                        <p>Pega — 2025</p>
+                    </div>
+                </a>
+                <!-- C# -->
+                <a href="https://www.udemy.com/certificate/UC-a1626d6d-a991-4d41-ad89-b6e4095cdb04/" target="_blank" class="cert-card">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\UC-a1626d6d-a991-4d41-ad89-b6e4095cdb04.jpg" alt="Microsoft Excel Analytics Certificate" />
+                    <div class="cert-content">
+                        <h3>Completion of complete C# masterclass</h3>
+                        <p>2025</p>
+                    </div>
+                </a>
+                <!-- Webdevelopment# -->
+                <a href="https://www.udemy.com/certificate/UC-5032ec5c-f571-49a3-a7db-e0ff1b40ccd6/ " target="_blank" class="cert-card">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\UC-5032ec5c-f571-49a3-a7db-e0ff1b40ccd6.jpg" alt="Microsoft Excel Analytics Certificate" />
+                    <div class="cert-content">
+                        <h3>Completion of complete WebDevlopement masterclass</h3>
+                        <p>2025</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <style>
+            .certifications-grid {
+                display: grid;
+                gap: 1.5rem;
+                grid-template-columns: 1fr;
+            }
+
+            @media (min-width: 600px) {
+                .certifications-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            .cert-card {
+                display: block;
+                background: #fff;
+                border-radius: 12px;
+                overflow: hidden;
+                text-decoration: none;
+                color: inherit;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+
+                .cert-card:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+                }
+
+                .cert-card img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+
+            .cert-content {
+                padding: 1rem 1.25rem;
+            }
+
+                .cert-content h3 {
+                    margin: 0 0 0.5rem;
+                    font-size: 1.15rem;
+                    letter-spacing: 0.3px;
+                }
+
+                .cert-content p {
+                    margin: 0;
+                    font-size: 0.95rem;
+                    color: #555;
+                }
+        </style>
+
+
+
+        </section>
+
+        <!-- HOBBIES -->
+        <!-- Hobbies & Interests Stand‑Alone Section -->
+        <section id="hobbies" style="font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;padding:2rem 1rem;color:#333;">
+            <style>
+                /* Hover effects for all cards */
+                .hob {
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+
+                    .card:hover {
+                        transform: translateY(-8px);
+                        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .card img {
+                        transition: transform 0.3s ease;
+                    }
+
+                    .card:hover img {
+                        transform: scale(1.05);
+                    }
+            </style>
+
+            <h2 style="font-size:2rem;margin-bottom:1.5rem;text-align:center;color:#1a202c;">Hobbies &amp; Interests</h2>
+
+            <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.5rem;max-width:1200px;margin:0 auto;">
+                <div class="hov" style="background:#fff;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.1);overflow:hidden;transition:transform .3s ease;">
+                    <img src="C:/Users/mprav/OneDrive/Desktop/portfolio site/profile image/20210929_155138.jpg" alt="Reading" style="width:100%;height:220px;object-fit:cover;pointer-events:none;" />
+                    <div class="card-content" style="padding:1.25rem 1.5rem;text-align:center;">
+                        <h3 style="margin-bottom:.5rem;font-size:1.25rem;color:#2d3748;">Reading</h3>
+                        <p style="color:#4a5568;">I’m an enthusiastic reader who dives into technology, spirituality, finance, and business books. <em>Favourite Impactful Book – Autobiography of a Yogi</em>.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background:#fff;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.1);overflow:hidden;transition:transform .3s ease;">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\WhatsApp Image 2025-05-18 at 17.54.38_6931b360.jpg" alt="Nature" style="width:100%;height:220px;object-fit:cover;pointer-events:none;" />
+                    <div class="card-content" style="padding:1.25rem 1.5rem;text-align:center;">
+                        <h3 style="margin-bottom:.5rem;font-size:1.25rem;color:#2d3748;">Nature</h3>
+                        <p style="color:#4a5568;">Love to spend time in nature and adopt calmness from it.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background:#fff;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.1);overflow:hidden;transition:transform .3s ease;">
+                    <img src="C:/Users/mprav/OneDrive/Desktop/portfolio site/profile image/WhatsApp Image 2025-05-18 at 18.03.02_f5b42227.jpg" alt="Workout" style="width:100%;height:220px;object-fit:cover;pointer-events:none;" />
+                    <div class="card-content" style="padding:1.25rem 1.5rem;text-align:center;">
+                        <h3 style="margin-bottom:.5rem;font-size:1.25rem;color:#2d3748;">Workout</h3>
+                        <p style="color:#4a5568;">Workout 5 days a week to stay fit &amp; balanced.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background:#fff;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.1);overflow:hidden;transition:transform .3s ease;">
+                    <img src="C:/Users/mprav/OneDrive/Desktop/portfolio site/profile image/360_F_429985307_Soobm8JrTAq3kOCM1GlJfq1J46COIvKb.jpg" alt="Meditation" style="width:100%;height:220px;object-fit:cover;pointer-events:none;" />
+                    <div class="card-content" style="padding:1.25rem 1.5rem;text-align:center;">
+                        <h3 style="margin-bottom:.5rem;font-size:1.25rem;color:#2d3748;">Mindfulness &amp; Meditation</h3>
+                        <p style="color:#4a5568;">Daily meditation (20‑45 min) cultivates presence and clarity.</p>
+                    </div>
+                </div>
+                <div class="card" style="background:#fff;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.1);overflow:hidden;transition:transform .3s ease;">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\WhatsApp Image 2025-05-18 at 22.38.27_c3795267.jpg" alt="Meditation" style="width:100%;height:220px;object-fit:cover;pointer-events:none;" />
+                    <div class="card-content" style="padding:1.25rem 1.5rem;text-align:center;">
+                        <h3 style="margin-bottom:.5rem;font-size:1.25rem;color:#2d3748;">Travel</h3>
+                        <p style="color:#4a5568;">I love traveling because it lets me meet new people, experience diverse cultures, and broaden my perspective.</p>
+                    </div>
+                </div>
+                <div class="card" style="background:#fff;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.1);overflow:hidden;transition:transform .3s ease;">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\WhatsApp Image 2025-05-18 at 18.03.01_6aa29c9e.jpg" alt="Meditation" style="width:100%;height:220px;object-fit:cover;pointer-events:none;" />
+                    <div class="card-content" style="padding:1.25rem 1.5rem;text-align:center;">
+                        <h3 style="margin-bottom:.5rem;font-size:1.25rem;color:#2d3748;">Mountains</h3>
+                        <p style="color:#4a5568;">I’m drawn to mountains—their towering beauty makes them my favorite spots for vacations and reflection</p>
+                    </div>
+                </div>
+                <!-- Adventure Placeholder -->
+                <div class="card" style="background:#fff;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.1);overflow:hidden;transition:transform .3s ease;">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\WhatsApp Image 2025-05-18 at 22.47.53_e48b52a9.jpg" alt="Adventure" style="width:100%;height:220px;object-fit:cover;pointer-events:none;" />
+                    <div class="card-content" style="padding:1.25rem 1.5rem;text-align:center;">
+                        <h3 style="margin-bottom:.5rem;font-size:1.25rem;color:#2d3748;">Adventures</h3>
+                        <p style="color:#4a5568;">Always thrilled for adventure and eager to live every moment to the fullest.</p>
+                    </div>
+                </div>
+                <div class="card" style="background:#fff;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.1);overflow:hidden;transition:transform .3s ease;">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\WhatsApp Image 2025-05-18 at 22.38.25_53c887ea.jpg" alt="Adventure" style="width:100%;height:220px;object-fit:cover;pointer-events:none;" />
+                    <div class="card-content" style="padding:1.25rem 1.5rem;text-align:center;">
+                        <h3 style="margin-bottom:.5rem;font-size:1.25rem;color:#2d3748;">Trying new activities</h3>
+                        <p style="color:#4a5568;">I love trying new activities because I believe they teach new skills and keep us excited.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Personal Achievements Section -->
+        <section id="Commitments" style="font-family: Arial, Helvetica, sans-serif; background: #fafafa; padding: 3rem 1rem; color: #333;">
+  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2.25rem; margin-bottom: 2rem; color: #1a202c;">Fitness Journey</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+      
+      <!-- Before Image -->
+      <figure style="flex: 1 1 300px; position: relative; max-width: 300px; height: 350px; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, filter 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.filter='brightness(1.1)';" onmouseout="this.style.transform='scale(1)'; this.style.filter='grayscale(30%)';">
+        <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\WhatsApp Image 2025-05-18 at 22.38.25_8a7cad79.jpg" alt="Before Weight Loss" style="width: 100%; height: 100%; object-fit: contain; filter: grayscale(30%);" />
+      </figure>
+
+      <!-- Content -->
+      <div style="flex: 1 1 400px; max-width: 480px; text-align: left;">
+        <h3 style="font-size: 1.75rem; margin-bottom: 0.75rem; color: #2d3748;">
+          Transformed <span style="color: #e53e3e; font-weight: 700;">107kg</span> to
+          <span style="color: #2f855a; font-weight: 700;">79kg</span>
+        </h3>
+        <p style="color: #4a5568; margin-bottom: 1rem;">
+          Achieved through dedicated research on food and diet, disciplined training, and sustainable lifestyle changes.
+        </p>
+        <p style="color: #2f855a; font-weight: 600; margin-bottom: 1rem;">
+          Helped more than <strong>20 people</strong> transform their lives and reach their weight loss goals.
+        </p>
+      </div>
+
+      <!-- After Image -->
+      <figure style="flex: 1 1 300px; position: relative; max-width: 300px; height: 350px; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, filter 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.filter='brightness(1.1)';" onmouseout="this.style.transform='scale(1)'; this.style.filter='none';">
+        <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\WhatsApp Image 2025-05-19 at 01.00.07_30ca195d.jpg" alt="After Weight Loss" style="width: 100%; height: 100%; object-fit: contain;" />
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+
+        <!-- Huge Supporter & Best Friend Card -->
+        <section style="text-align: center; padding: 2rem 1rem;">
+            <h2 style="margin-bottom: 1rem; font-size: 1.75rem; letter-spacing: 0.5px;">
+                Greatest Supporters
+            </h2>
+            <div class="card" style="max-width: 600px; margin: 0 auto; border-radius: 12px; overflow: hidden;">
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\WhatsApp Image 2025-05-18 at 22.38.25_e2e1bec4.jpg"
+                         alt="Best friend 1"
+                         style="height: 300px; width: auto; object-fit: contain;" />
+                    <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\WhatsApp Image 2025-05-18 at 22.47.55_b34c46da.jpg"
+                         alt="Best friend 2"
+                         style="height: 300px; width: auto; object-fit: contain;" />
+                </div>
+                <div class="card-content" style="padding: 1rem; max-width: 600px; margin: 1rem auto 0; color: #555;">
+                    <p style="font-size: 1rem; line-height: 1.5;">
+                        Always by my side—cheering me on, celebrating my wins, and lifting me through challenges. Yes, my parents are my best friends.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Mindset Section -->
+        <section id="mindset" style="padding:3rem 1rem;">
+            <style>
+                /* Hover effects for all cards */
+                .card {
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+
+                    .card:hover {
+                        transform: translateY(-8px);
+                        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .card img {
+                        transition: transform 0.3s ease;
+                    }
+
+                    .card:hover img {
+                        transform: scale(1.05);
+                    }
+            </style>
+
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:2rem; color:#2c7a7b; font-weight:600;">
+                Mindset
+            </h2>
+            <div class="card" style="max-width:600px; margin:0 auto; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(44, 122, 123, 0.25); background:#e6fffa;">
+                <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\dp.jpg" alt="Positive mindset image"
+                     style="width:100%; height:500px; object-fit: contain; filter: brightness(1.1);" />
+                <blockquote style="padding:1.5rem 1.5rem 2rem; font-size:1.1rem; line-height:1.6; font-style:italic; color:#276749; text-align:center; margin:0;">
+                    “I embrace every challenge with optimism and resilience, knowing that perseverance and kindness create a path to success and happiness.”
+                </blockquote>
+            </div>
+        </section>
+
+
+        <!-- ABOUT & CONCLUSION -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p style="max-width:60ch;color:var(--muted);line-height:1.7;">
+                Entry‑level Business Analyst with a passion for turning raw data into business value.
+                I’ve helped manufacturing and FMCG clients uncover hidden cost‑savings, craft KPI
+                dashboards, and improve decision‑making speed. Proficient with JIRA, Confluence,
+                SQL, Power BI, and Postman—and always learning the next tool that will make
+                insights clearer.
+            </p>
+
+            <!-- Personal Statement Card -->
+            <div class="card horizontal" style="margin-top:2rem;">
+                <img src="C:\Users\mprav\OneDrive\Desktop\portfolio site\profile image\WhatsApp Image 2025-05-18 at 22.40.26_bd8a8143.jpg" alt="Praveen Reddy Mittapally" />
+                <div class="card-content">
+                    <h3>My Mission</h3>
+                    <p>
+                        Transforming business questions into clear, data‑driven answers by gathering requirements, translating them into precise analyses, and communicating results through compelling visuals and concise executive briefs—so stakeholders can confidently choose the next best action.
+                    </p>
+                    <p style="margin-top:1rem;">
+                        If you need a Business Analyst who can translate complex data into clear, executive‑ready actions, let’s connect!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p class="tagline">Got a question or proposal? Drop me a line!</p>
+            <a class="btn" href="mailto:mpraveenreddy2442k@gmail.com">Email:mpraveenreddy2442k@gmail.com</a>
+            <a class="btn" href="mailto:mpraveenreddy2442k@gmail.com">Ph:+1 6122751753</a>
+        </section>
+    </main>
+
+    <footer>© <span id="year"></span> Praveen Reddy Mittapally. All rights reserved.</footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
